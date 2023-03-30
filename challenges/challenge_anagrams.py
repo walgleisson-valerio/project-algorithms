@@ -1,10 +1,12 @@
-# função de ordenação baseada nos estudos dp que foi ensinado na trybe, e numa questão respondida no stackoverflow (https://stackoverflow.com/questions/13101468/python-how-to-sort-the-alphabet-in-a-list-without-sorted-functions), no qual eu reolvi reimpplentar para ficar mais didático.
+# função baseada numa questão respondida no stackoverflow
+# https://stackoverflow.com/questions/13101468/python-how-to-sort-the-alphabet-in-a-list-without-sorted-functions)
+# No qual eu reolvi reimpplementar para ficar mais didático.
 def quicksort(string):
     if len(string) == 0:
         return string
 
     pivot = string[0]
-    left_string = [x for x in string[1:] if x <  pivot]
+    left_string = [x for x in string[1:] if x < pivot]
     right_string = [x for x in string[1:] if x >= pivot]
 
     ordered_left_string = quicksort(left_string)
